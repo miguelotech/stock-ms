@@ -20,8 +20,4 @@ public interface StockMapper {
 
     public SaveStockResponseDto toSaveStockResponseDto(Stock stock);
 
-//    @AfterMapping
-//    default void setRemainingValues(Stock stock, @MappingTarget StockDto stockDto) {
-//        stockDto.setStatus(Boolean.TRUE.equals(user.getActive()) ? "Active" : "Inactive");
-//    }
 }

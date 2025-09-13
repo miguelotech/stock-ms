@@ -41,6 +41,6 @@ public class StockController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public SaveStockResponseDto save(@RequestBody SaveStockRequestDto saveStockRequestDto) {
-        return INSTANCE.toSaveStockResponseDto(stockService.save(INSTANCE.toEntity(saveStockRequestDto)));
+        return INSTANCE.toSaveStockResponseDto(stockService.save(INSTANCE.toEntityFromRequest(saveStockRequestDto)));
     }
 }
